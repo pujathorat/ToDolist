@@ -1,0 +1,67 @@
+<%- include('common/header.ejs'); -%>
+<div class="box" id="heading">
+  <h1>
+      Welcome @ Home Store
+  </h1>
+</div>
+<section>
+<div class="box">
+  <h2>Fruits</h2>
+  <ul class="list" style="display: none;">
+      <% fruits.forEach(function(fruit) { %>
+          <li><%= fruit.name %></li>
+      <% }); %>
+  </ul></div>
+  <div class="box">
+  <h2>Vegetables</h2>
+  <ul class="list" style="display: none;">
+      <% vegetables.forEach(function(vegetable) { %>
+          <li><%= vegetable.name %></li>
+      <% }); %>
+  </ul>
+</div>
+<div class="box">
+  <h2>Cereals</h2>
+  <ul class="list" style="display: none;">
+      <% cereals.forEach(function(cereal) { %>
+          <li><%= cereal.name %></li>
+      <% }); %>
+  </ul></div>
+</section>
+<section>
+  <div class="box">
+    <h2>Teddys</h2>
+    <ul class="list" style="display: none;">
+        <% teddys.forEach(function(teddy) { %>
+            <li><%= teddy.name %></li>
+        <% }); %>
+    </ul></div>
+    <div class="box">
+      <h2>Beauty</h2>
+      <ul class="list" style="display: none;">
+          <% beauty.forEach(function(beauty) { %>
+              <li><%= beauty.name %></li>
+          <% }); %>
+      </ul></div>
+      <div class="box">
+        <h2>Kurties</h2>
+        <ul class="list" style="display: none;">
+            <% kurties.forEach(function(kurti) { %>
+                <li><%= kurti.name %></li>
+            <% }); %>
+        </ul></div>
+</section>
+
+<section class="bottom" >
+<div>
+    <form class="item" action="/new-page" method="get">
+        <input type="text" id="selectItem" name="item" placeholder="selectItem" autocomplete="off"  />
+        <!-- <a href="/new-page">SelectItem</a> -->
+      </form></div></section>
+      <section><form class="next" action="/submit" method="get">
+        <div></div>
+        <button class="btn-button-bottom-right"> + </button>
+          </form>
+     <!-- / <button type="submit" class="lastpage" name="item" onclick="showList()"></button> -->
+</section>
+  <%- include('common/footer.ejs'); -%>

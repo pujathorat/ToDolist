@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        html {
+    background-color: #e4e9fd;
+    background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%);
+    min-height: 1000px;
+    font-family: "helvetica neue";
+  }
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: stretch;
+    min-height: 95vh;
+  }
+    </style>
+</head>
+<body>
+    <section class="login">
+    <h1>Login for Order</h1>
+    <form action="/submit" method="POST">
+        <input type="text" placeholder="Enter Username" name="username">
+        <br>
+        <input type="password" placeholder="Enter Password" name="password">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    </section>
+</body>
+</html>
